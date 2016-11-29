@@ -1,0 +1,63 @@
+<h1>{{title}}</h1>
+
+
+<div class="container">
+
+
+{{#each images}}
+  <div class="item">
+    <img src="/uploads/{{attributes.path}}">
+
+    {{!-- <div class="item-overlay top"></div> --}}
+  </div>
+{{else}}
+This country doesn't have any photos yet.
+{{/each}}
+
+<!-- end of container -->
+</div>
+
+<!-- post a comment -->
+<div container="comment-container">
+  <div id="db-comment-id" data-comment-id="#"></div>
+
+<div class="comment-text-block">
+
+<form method="post" enctype="multipart/form-data" action="/home">
+  <br>
+  <p>Leave a comment</p>
+  <br>
+  <input type="hidden" name="id" value="">
+  <textarea name="text" type="text" value="" placeholder="Add a comment..."></textarea>
+  <a class="waves-effect waves-light btn">POST</a>
+  <br>
+  <br>
+  <!-- <p>Upload and share an image.</p>
+  <input type="file" name="upload" value="">
+  <input type="Submit"> -->
+</form>
+</div>
+<!-- end of post a comment form container -->
+</div>
+
+<br>
+<br>
+<!-- Reply to a comment -->
+<div class="comment-block">
+  <textarea name="comment-author"value="">Lovely hotel.</textarea>
+  <a class="waves-effect waves-light btn">REPLY</a>
+  <br>
+  <br>
+
+<!--this user is hard coded-should be user info here from session login  -->
+  <div class="comment-author">
+  <img src="/images/fish.gif" 30x30 alt="" />
+  <a href="#">grumpyfish</a><br>
+  <span class="comment-time">October 30, 2016</span></a>
+  </div>
+  <br>
+  <br>
+
+  <!-- <svg class="svg-icon favorite" src="" height="14" width="12">
+  <svg class="svg-icon icon-vote-comment-down" type="img" height="14" width="12" viewBox="0 1 0 0">
+  <a href="#" onclick="tweet(event);return false;" class="icon-twitter" title="Share in Twitter"></a> -->
